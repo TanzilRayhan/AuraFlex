@@ -11,6 +11,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Classes from "./pages/Classes";
 import AuthProvider from "./provider/AuthProvider";
+import Gallery from "./pages/Gallery";
+import Trainer from "./pages/Trainer";
+import Forum from "./pages/Forum";
+import Dashboard from "./pages/Dashboard";
 
 
 const router = createBrowserRouter([
@@ -33,10 +37,25 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>,
+      },
+      {
+        path: "/trainer",
+        element: <Trainer></Trainer>,
+      },
+      {
         path: "/classes",
         element: <Classes></Classes>,
       },
-      
+      {
+        path: "/forum",
+        element: <Forum></Forum>,
+      },
      
     ]
     

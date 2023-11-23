@@ -63,7 +63,7 @@ const Login = () => {
             <h1 className="text-5xl py-5 font-bold">Login now!</h1>
 
           </div>
-          <div className="card flex-shrink-0  max-w-lg shadow-2xl themeColor">
+          <div className="card flex-shrink-0 max-w-lg shadow-2xl themeColor">
             <form onSubmit={handleLogin} className="card-body ">
               <div className="form-control">
                 <label className="label">
@@ -86,7 +86,7 @@ const Login = () => {
               <div className="form-control my-3">
                 <button className="btn btn-primary bg-[#0a183b]">Login</button>
               </div>
-              <p className="text-white">
+              <p className="text-white text-center">
                 Do not have an account? Please{" "}
                 <Link to="/register">
                   <button className="btn-link font-bold">Register</button>

@@ -11,6 +11,10 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li><NavLink className="font-bold text-slate-500" to="/">Home</NavLink></li>
+      <li><NavLink className="font-bold text-slate-500" to="/gallery">Gallery</NavLink></li>
+      <li><NavLink className="font-bold text-slate-500" to="/trainer">Trainer</NavLink></li>
+      <li><NavLink className="font-bold text-slate-500" to="/classes">Classes</NavLink></li>
+      <li><NavLink className="font-bold text-slate-500" to="/dashboard">Dashboard</NavLink></li>
     </>
   )
 
@@ -26,7 +30,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" alt="logo" className="w-60"/>
+          <Link to="/"><img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" alt="logo" className="w-60"/></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -34,16 +38,22 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end  py-5">
+        <Link to='/forum'>
+            <button className="btn btn-md btn-ghost">Forum</button>
+          </Link>
+
           {
             user?.email ? <div className="dropdown dropdown-end">
               <label tabIndex={0} className=" btn  btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src={user.photoURL} alt={user.displayName} />
+                  <img src={user?.photoURL} alt={user.displayName} />
                  
                 </div>
-                <h1 className="">{user.displayName}</h1>
               </label>
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2  shadow-xl bg-base-100 rounded-box w-52">
+                <li>
+                  <button className="btn btn-sm normal-case btn-ghost">{user.displayName}</button>
+                </li> 
                 <li>
                   <button className="btn btn-sm normal-case btn-ghost">{user.email}</button>
                 </li>

@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
       <div className=" themeColor text-white">
         <footer className="max-w-7xl lg:justify-between p-10 lg:px-0 mx-auto footer">
           <aside>
-            <img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" className="w-60 pb-5" />
+          <Link to="/"><img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" alt="logo" className="w-60"/></Link>
             <p>Copyright © 2023 - All right reserved <br /> by AuraFlex Fitness</p>
           </aside>
           <nav>
