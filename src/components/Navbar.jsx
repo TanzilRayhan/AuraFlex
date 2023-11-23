@@ -26,7 +26,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <img src="/public/AuraFlex-Logo.png" alt="logo" className="w-60"/>
+          <img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" alt="logo" className="w-60"/>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

@@ -3,7 +3,7 @@ const Footer = () => {
       <div className=" themeColor text-white">
         <footer className="max-w-7xl lg:justify-between p-10 lg:px-0 mx-auto footer">
           <aside>
-            <img src="/public/AuraFlex-Logo.png" className="w-60 pb-5" />
+            <img src="https://i.ibb.co/4dFqgjF/Aura-Flex-Logo.png" className="w-60 pb-5" />
             <p>Copyright © 2023 - All right reserved <br /> by AuraFlex Fitness</p>
           </aside>
           <nav>
