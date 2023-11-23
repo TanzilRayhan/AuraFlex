@@ -57,13 +57,13 @@ const Login = () => {
           backgroundImage:
             "url(https://i.ibb.co/ZLLs8DC/fitness-1.jpg)",
         }}>
-        <div className="hero-overlay bg-opacity-50"></div>
+        <div className="hero-overlay brightness-50"></div>
         <div className="hero-content flex-col ">
           <div className="text-center text-white">
             <h1 className="text-5xl py-5 font-bold">Login now!</h1>
 
           </div>
-          <div className="card flex-shrink-0  max-w-md shadow-2xl themeColor">
+          <div className="card flex-shrink-0  max-w-lg shadow-2xl themeColor">
             <form onSubmit={handleLogin} className="card-body ">
               <div className="form-control">
                 <label className="label">
@@ -83,7 +83,7 @@ const Login = () => {
               <div>
                 <p className="text-red-500 font-bold">{error}</p>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control my-3">
                 <button className="btn btn-primary bg-[#0a183b]">Login</button>
               </div>
               <p className="text-white">
