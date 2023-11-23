@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-//import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 const Main = () => {
     return (
         <div className="josefin">
-           
+           <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

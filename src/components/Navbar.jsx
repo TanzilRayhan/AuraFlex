@@ -11,12 +11,6 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li><NavLink className="font-bold text-slate-500" to="/">Home</NavLink></li>
-      <li><NavLink className="font-bold text-slate-500" to="/addJob">AddJob</NavLink></li>
-      <li><NavLink className="font-bold text-slate-500" to="/postedJobs/:email">My posted jobs</NavLink></li>
-      <li><NavLink className="font-bold text-slate-500" to="/bids">My Bids</NavLink></li>
-      <li><NavLink className="font-bold text-slate-500" to="/bidRequests">Bid
-        Requests</NavLink></li>
-      <li><NavLink className="font-bold text-slate-500" to="/about">About</NavLink></li>
     </>
   )
 
@@ -32,7 +26,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className=" normal-case font-bold text-4xl" href="">NexTalent</a>
+          <img src="/public/AuraFlex-Logo.png" alt="logo" className="w-60"/>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -63,7 +57,7 @@ const Navbar = () => {
             </div>
               :
               <Link to='/login'>
-                <button className="btn btn-md themeColor btn-ghost">Login</button>
+                <button className="btn btn-md btn-outline">Login</button>
               </Link>
           }
         </div>
