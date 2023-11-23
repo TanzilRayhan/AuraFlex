@@ -1,10 +1,10 @@
 const Footer = () => {
     return (
-      <div className=" themeColor text-white ">
+      <div className=" themeColor text-white">
         <footer className="max-w-7xl px-10 lg:px-0 mx-auto footer py-10">
           <aside>
-            <a className=" normal-case font-bold text-4xl">AuraFlex</a>
-            <p>Copyright © 2023 - All right reserved by NexTalent Ltd</p>
+            <img src="/public/AuraFlex-Logo.png" className="w-60 pb-5" />
+            <p>Copyright © 2023 - All right reserved by AuraFlex Fitness</p>
           </aside>
           <nav>
             <header className="footer-title">Company</header>

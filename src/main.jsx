@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorPage from "./pages/ErrorPage";
 import Main from "./layout/Main";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 const router = createBrowserRouter([
@@ -14,6 +17,20 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("")
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      
      
     ]
     
