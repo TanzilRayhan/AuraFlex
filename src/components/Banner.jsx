@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Banner = () => {
+   
+  useEffect(()=> {
+    Aos.init();
+  }, [])
+
     return (
       <div>
         <div
@@ -11,16 +19,18 @@ const Banner = () => {
           }}
         >
           <div className="hero-overlay brightness-50"></div>
-          <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-5xl mx-auto">
-              <div className="px-5 lg:px-0">
-                <h1 className="text-4xl lg:text-6xl text-center font-bold py-5 text-white">
-                  Welcome To AuraFlex
+          <div className="hero-content text-neutral-content">
+            <div className="max-w-7xl mx-auto ">
+              <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="px-5 lg:px-0" >
+                <h1 className="text-4xl lg:text-7xl font-extrabold py-5 text-white">
+                AuraFlex <br /> <span className="text-2xl lg:text-4xl font-semibold">Fitness Tracker</span>
                 </h1>
-                <p className="text-xs lg:text-base font-semibold pt-5 pb-10 text-grey-400">
-                AuraFlex is a cutting-edge fitness tracker website designed to elevate your fitness journey. With a sleek and intuitive interface, AuraFlex empowers users to monitor and optimize their health and wellness. Track your workouts, analyze your performance, and set personalized fitness goals tailored to your unique needs. The website seamlessly integrates with a variety of fitness devices, providing real-time data and insights to keep you motivated and on track. Whether you are a seasoned athlete or just starting your fitness adventure, AuraFlex is your dedicated companion on the path to a healthier, more active lifestyle. Join the AuraFlex community and experience the next level of fitness tracking and personal well-being.
+                <div>
+                <p className="w-2/3 lg:w-1/3 text-xs lg:text-lg font-semibold pt-5 pb-10 text-grey-400">
+                AuraFlex is a cutting-edge fitness tracker website designed to elevate your fitness journey. With a sleek and intuitive interface, AuraFlex empowers users to monitor and optimize their health and wellness. Track your workouts, analyze your performance, and set personalized fitness goals tailored to your unique needs.
                 </p>
-                <Link to="/classes"><button className="btn btn-outline bg-white btn-ghost">Explore Our Classes</button></Link>
+                </div>
+                <Link to="/classes"><button className="btn btn-outline bg-white btn-ghost my-10">Explore Our Classes</button></Link>
               </div>
             </div>
           </div>

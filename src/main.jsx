@@ -15,6 +15,7 @@ import Gallery from "./pages/Gallery";
 import Trainer from "./pages/Trainer";
 import Forum from "./pages/Forum";
 import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./privateroute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       },
       {
         path: "/gallery",
