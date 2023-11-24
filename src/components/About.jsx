@@ -10,10 +10,10 @@ const About = () => {
     }, [])
     return (
         <div>
-            <div className="hero py-10 bg-slate-300">
-                <div data-aos="fade-left"
+            <div className="hero px-5 py-10 bg-slate-300">
+                <div data-aos="zoom-out"
                     data-aos-easing="linear"
-                    data-aos-duration="1500" className="hero-content lg:gap-20 flex-col lg:flex-row">
+                    data-aos-duration="1000" className="hero-content lg:gap-20 flex-col lg:flex-row">
                     <img src="https://i.ibb.co/zSwqR6Y/AuraFlex.png" className="lg:w-2/6 rounded-lg " />
                     <div>
                         <h1 className="text-4xl lg:text-5xl mt-5 lg:mt-0 font-bold">About | AuraFlex</h1>
