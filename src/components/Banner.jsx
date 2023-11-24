@@ -15,7 +15,7 @@ const Banner = () => {
           className="hero lg:min-h-screen"
           style={{
             backgroundImage:
-              "url(https://i.ibb.co/7nQwj3t/fitness-7.jpg)",
+              "url(https://i.ibb.co/7nQwj3t/fitness-7.jpg)"
           }}
         >
           <div className="hero-overlay brightness-50"></div>
@@ -23,7 +23,7 @@ const Banner = () => {
             <div className="max-w-7xl mx-auto ">
               <div data-aos="fade-down-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="px-5 lg:px-0" >
                 <h1 className="text-4xl lg:text-7xl font-extrabold py-5 text-white">
-                AuraFlex <br /> <span className="text-2xl lg:text-4xl font-semibold">Fitness Tracker</span>
+                AuraFlex <br /> <span className="text-xl lg:text-4xl font-semibold">Fitness Tracker/Lifestyle Mentor</span>
                 </h1>
                 <div>
                 <p className="w-2/3 lg:w-1/3 text-xs lg:text-lg font-semibold pt-5 pb-10 text-grey-400">

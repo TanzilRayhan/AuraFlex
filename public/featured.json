@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "cover": "https://i.ibb.co/tZ4dY2L/Fitness-Tracking.jpg",
+      "title": "Real-time Fitness Tracking",
+      "shortDescription": "Stay on top of your fitness goals with real-time tracking, providing insights into your workouts and daily activities for a healthier lifestyle."
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co/9Nr53PF/Fitness-Classes.jpg",
+      "title": "Professional Fitness Classes",
+      "shortDescription": "Access a variety of professional fitness classes led by experienced trainers, offering diverse routines to suit your fitness preferences and levels."
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co/z7KCHY0/Fitness-Training-Programs.jpg",
+      "title": "Personalized Training Programs",
+      "shortDescription": "Experience personalized training programs tailored to your fitness objectives, ensuring targeted and effective workouts to achieve your desired results."
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co/hR3cDGL/Fitness-Trainers.jpg",
+      "title": "Expert Fitness Trainers",
+      "shortDescription": "Connect with expert fitness trainers dedicated to guiding and motivating you on your fitness journey, providing professional advice and support."
+    },
+    {
+      "id": 5,
+      "cover": "https://i.ibb.co/cYnd5d9/Fitness-Equipment.jpg",
+      "title": "Top-notch Fitness Equipment",
+      "shortDescription": "Explore a range of top-notch fitness equipment designed to enhance your workouts, ensuring a comprehensive and enjoyable fitness experience."
+    },
+    {
+      "id": 6,
+      "cover": "https://i.ibb.co/M8dRW95/Fitness-Challenges.jpg",
+      "title": "Fitness Challenges",
+      "shortDescription": "Engage with a vibrant fitness community, participate in challenges, and stay motivated by sharing achievements and progress with fellow fitness enthusiasts."
+    }
+  ]
+  
