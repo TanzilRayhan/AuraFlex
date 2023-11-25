@@ -1,17 +1,21 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedCard from '../components/FeaturedCard';
+import { Helmet } from 'react-helmet-async';
 
 const Gallery = () => {
     const featuredData = useLoaderData();
     console.log(featuredData);
     return (
         <div>
+             <Helmet>
+                <title>Gallery | AuraFlex</title>
+            </Helmet>
             <div
                 className="hero lg:min-h-fit"
                 style={{
                     backgroundImage:
-                        "url(https://i.ibb.co/zmrFjxm/gym-1.jpg)"
+                        "url(https://images.unsplash.com/photo-1651840403917-50e629a8f3e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
                 }}
             >
                 <div className="hero-overlay p-20 lg:p-32 brightness-50"></div>

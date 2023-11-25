@@ -34,7 +34,7 @@ const Testimonials = () => {
       >
         <div
           slot="container-start"
-          className="parallax-bg"
+          className="parallax-bg brightness-75"
           style={{
             'background-image':
               'url(https://i.ibb.co/n7gGKb2/barbell-bar.jpg)',
