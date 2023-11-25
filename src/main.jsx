@@ -44,6 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
+        loader: () => fetch("/featured.json")
       },
       {
         path: "/trainer",
