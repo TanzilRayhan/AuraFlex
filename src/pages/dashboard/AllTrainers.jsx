@@ -49,9 +49,9 @@ const AllTrainers = () => {
                                 </td>
                                 <td>{trainer.experience} years</td>
                                 <th>
-                                    <button className="btn btn-ghost btn-outline btn-sm">Pay</button>
+                                    <button className="btn btn-ghost btn-outline ">Pay</button>
                                     <br />
-                                    <span className="badge badge-ghost badge-sm">pending</span>
+                                    <span className="badge my-2 badge-ghost badge-sm">pending</span>
                                 </th>
                             </tr> )
                         }

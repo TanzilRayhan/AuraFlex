@@ -25,6 +25,7 @@ import Balance from "./pages/dashboard/Balance";
 import AppliedTrainers from "./pages/dashboard/AppliedTrainers";
 import AllUsers from "./pages/dashboard/AllUsers";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import TrainerBooked from "./pages/trainerBooked";
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/beTrainer",
         element: <PrivateRoute><BeTrainer></BeTrainer></PrivateRoute>,
+      },
+      {
+        path: "/trainerBooked",
+        element: <PrivateRoute><TrainerBooked></TrainerBooked></PrivateRoute>,
       },
       {
         path: "/classes",

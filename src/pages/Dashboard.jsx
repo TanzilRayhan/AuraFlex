@@ -16,10 +16,10 @@ const Dashboard = () => {
             {
                 isAdmin ? <>
                     <li><NavLink to="/dashboard/allUsers">All Users</NavLink></li>
-                    <li><NavLink to="/dashboard/allMembers">All Members</NavLink></li>
-                    <li><NavLink to="/dashboard/allSubscribers">All Subscribers</NavLink></li>
                     <li><NavLink to="/dashboard/allTrainers">All Trainers</NavLink></li>
                     <li><NavLink to="/dashboard/appliedTrainers">Applied Trainers</NavLink></li>
+                    <li><NavLink to="/dashboard/allMembers">All Members</NavLink></li>
+                    <li><NavLink to="/dashboard/allSubscribers">All Subscribers</NavLink></li>
                     <li><NavLink to="/dashboard/balance">Balance</NavLink></li>
                 </>
                     :

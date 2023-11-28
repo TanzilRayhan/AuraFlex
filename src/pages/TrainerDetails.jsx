@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const TrainerDetails = () => {
     const trainer = useLoaderData();
-    const { trainerName, trainerEmail,trainerAge,trainerImage, weekTime, dayTime, experience } = trainer;
+    const { trainerName, trainerAge, trainerImage, weekTime, dayTime, experience } = trainer;
     return (
         <div>
             <Helmet>
@@ -36,40 +36,41 @@ const TrainerDetails = () => {
                     </div>
                     <div className="card-body">
                         <div>
-                            
+
                             <h2 className="text-center text-2xl lg:text-4xl my-3 font-bold">Name: {trainerName}</h2>
                             <h2 className="text-center text-2xl lg:text-3xl my-3 font-semibold">Age: {trainerAge}</h2>
-                            <h2 className="text-center text-2xl lg:text-2xl ">Trainer Email: {trainerEmail}</h2>
+                            <h2 className="text-center text-xxl  my-3 font-semibold">Skills: patience, communication, flexible </h2>
+                  
 
                             <div className="flex flex-col lg:items-center  py-2 gap-2">
-                                <div className="badge p-4 badge-lg badge-accent">
+                                <div className="badge p-4 badge-lg badge-error text-white">
                                     Experience: {experience} Years
                                 </div>
                                 <div className="badge p-4 badge-lg badge-primary text-sm badge-outline ">
-                                    Available Day Time: {dayTime} AM/PM
+                                    Available Day Time: {dayTime} hours
                                 </div>
                                 <div className="badge p-4 badge-lg badge-error text-sm badge-outline ">
                                     Available Week Hour: {weekTime} hours
                                 </div>
+                                <div>
+                                    <Link to="/trainerBooked">
+                                        <button className="btn w-60 mt-5 text-xl btn-primary">Available Slots: {dayTime}</button>
+                                    </Link>
+                                </div>
                             </div>
-
-                            <p className="mr-20 font-semibold text-lg"></p>
-                        </div>
-
-                        <div className="card-actions justify-center">
-                            <div>
-                                <Link to="/beTrainer">
-                                    <button className="btn w-40 btn-outline btn-ghost">Become a Trainer</button>
-                                </Link>
-                            </div>
-
 
                         </div>
                     </div>
                 </div>
             </div>
 
-
+            <div className="flex mt-10 p-10 bg-slate-300 justify-center">
+                <div>
+                    <Link to="/beTrainer">
+                        <button className="btn w-80 btn-outline themeColor text-white">Become a Trainer</button>
+                    </Link>
+                </div>
+            </div>
 
         </div>
     );
