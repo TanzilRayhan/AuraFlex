@@ -39,8 +39,8 @@ const Register = () => {
                 handleUpdateProfile(name, image)
                     .then(() => {
                         const userInfo = {
-                            userName: name,
-                            userEmail: email
+                            name: name,
+                            email: email
                         }
                         axiosPublic.post('/users', userInfo)
                         .then(res => {

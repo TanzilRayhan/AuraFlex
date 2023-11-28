@@ -5,14 +5,16 @@ import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
-    logOut();
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error));
   };
 
   const navLinks = (
     <>
       <li><NavLink className="font-bold text-slate-800" to="/">Home</NavLink></li>
       <li><NavLink className="font-bold text-slate-800" to="/gallery">Gallery</NavLink></li>
-      <li><NavLink className="font-bold text-slate-800" to="/trainer">Trainer</NavLink></li>
+      <li><NavLink className="font-bold text-slate-800" to="/trainer">Trainers</NavLink></li>
       <li><NavLink className="font-bold text-slate-800" to="/classes">Classes</NavLink></li>
       <li><NavLink className="font-bold text-slate-800" to="/dashboard">Dashboard</NavLink></li>
     </>

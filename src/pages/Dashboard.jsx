@@ -5,10 +5,11 @@ import { FaHome } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { MdOutlineClass } from "react-icons/md";
 import { FaPeopleRobbery } from "react-icons/fa6";
+import useAdmin from '../hooks/useAdmin';
 
 const Dashboard = () => {
 
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
     const navLinks = (
         <>

@@ -29,7 +29,7 @@ const Newsletter = () => {
                                 <span className="label-text">Email address</span>
                             </label>
                             <div className="join">
-                                <input type="text" name="newsletterEmail" placeholder="username@site.com" className="w-full input input-bordered join-item" autoComplete='off' required/>
+                                <input type="text" name="newsletterEmail" placeholder="name@site.com" className="w-full input input-bordered join-item" autoComplete='off' required/>
                                 <button className="btn btn-outline join-item">Subscribe</button>
                             </div>
                         </fieldset>
