@@ -8,6 +8,5 @@ Website: https://aura-flex.web.app/
 - SignIn with Google using Firebase
 - Client & Server Side using MongoDB
 - CRUD operations to Create, Read, Update & Delete Items. 
-- Admin & user system
 
 
