@@ -9,15 +9,22 @@ import Main from "./layout/Main";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Classes from "./pages/Classes";
+import Classes from "./pages/dashboard/Classes";
 import AuthProvider from "./provider/AuthProvider";
 import Gallery from "./pages/Gallery";
 import Trainer from "./pages/Trainer";
 import Forum from "./pages/Forum";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./privateroute/PrivateRoute";
-import BeTrainer from "./pages/BeTrainer";
+import BeTrainer from "./pages/dashboard/BeTrainer";
 import TrainerDetails from "./pages/TrainerDetails";
+import AllTrainers from "./pages/dashboard/AllTrainers";
+import AllMembers from "./pages/dashboard/AllMembers";
+import AllSubscribers from "./pages/dashboard/AllSubscribers";
+import Balance from "./pages/dashboard/Balance";
+import AppliedTrainers from "./pages/dashboard/AppliedTrainers";
+import AllUsers from "./pages/dashboard/AllUsers";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
 const router = createBrowserRouter([
@@ -29,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/featured.json")
+        loader: () => fetch("http://localhost:5001/feature")
       },
       {
         path: "/login",
@@ -40,13 +47,9 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/dashboard",
-        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-      },
-      {
         path: "/gallery",
         element: <Gallery></Gallery>,
-        loader: () => fetch("/featured.json")
+        loader: () => fetch("http://localhost:5001/feature")
       },
       {
         path: "/trainer",
@@ -55,8 +58,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/trainerDetails/:id",
-        element:  <TrainerDetails></TrainerDetails> ,
-        loader: ({params}) => fetch(`http://localhost:5001/trainer/${params.id}`)
+        element: <TrainerDetails></TrainerDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5001/trainer/${params.id}`)
       },
       {
         path: "/beTrainer",
@@ -70,19 +73,59 @@ const router = createBrowserRouter([
         path: "/forum",
         element: <Forum></Forum>,
       },
-     
+
     ]
-    
+
   },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      //admin routes
+      {
+        path: 'allTrainers',
+        element: <AllTrainers></AllTrainers>,
+        loader: () => fetch("http://localhost:5001/trainer")
+      },
+      {
+        path: 'allUsers',
+        element: <AllUsers></AllUsers>,
+
+      },
+      {
+        path: 'allMembers',
+        element: <AllMembers></AllMembers>,
+
+      },
+      {
+        path: 'allSubscribers',
+        element: <AllSubscribers></AllSubscribers>,
+
+      },
+      {
+        path: 'appliedTrainers',
+        element: <AppliedTrainers></AppliedTrainers>,
+        loader: () => fetch("http://localhost:5001/trainer")
+      },
+      {
+        path: 'balance',
+        element: <Balance></Balance>,
+      },
+    ]
+
+  }
 
 ]);
+const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>
 );

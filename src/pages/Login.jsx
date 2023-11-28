@@ -5,9 +5,10 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Login = () => {
-
+  const axiosPublic = useAxiosPublic();
   const { signIn } = useContext(AuthContext);
   const { googleSignIn } = useContext(AuthContext);
   const location = useLocation();
@@ -17,7 +18,14 @@ const Login = () => {
   const handleGoogle = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
+        const userInfo = {
+          userName: result.user.displayName,
+          userEmail: result.user?.email
+        }
+        axiosPublic.post('/users', userInfo)
+        .then( res=>{
+          console.log(res.data);
+        })
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -35,6 +43,13 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login Successful",
+          showConfirmButton: false,
+          timer: 1500
+        });
       })
       .catch((error) => {
         Swal.fire({
@@ -49,9 +64,9 @@ const Login = () => {
 
   return (
     <div>
-        <Helmet>
-                <title>Login | NexTalent</title>
-            </Helmet>
+      <Helmet>
+        <title>Login | NexTalent</title>
+      </Helmet>
       <div className="hero min-h-screen"
         style={{
           backgroundImage:

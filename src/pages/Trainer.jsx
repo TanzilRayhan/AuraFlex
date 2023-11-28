@@ -35,7 +35,6 @@ const Trainer = () => {
                     <TrainerCard key={trainers.id} trainers={trainers}>
                     </TrainerCard>
                 ))}
-
             </div>
             </div>
             

@@ -36,7 +36,7 @@ const Testimonials = () => {
           slot="container-start"
           className="parallax-bg brightness-75"
           style={{
-            'background-image':
+            backgroundImage:
               'url(https://i.ibb.co/n7gGKb2/barbell-bar.jpg)',
           }}
           data-swiper-parallax="-23%"

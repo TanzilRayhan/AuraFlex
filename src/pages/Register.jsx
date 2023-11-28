@@ -4,9 +4,10 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Register = () => {
-
+    const axiosPublic = useAxiosPublic();
     const { createUser, handleUpdateProfile } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -37,6 +38,22 @@ const Register = () => {
             .then((result) => {
                 handleUpdateProfile(name, image)
                     .then(() => {
+                        const userInfo = {
+                            userName: name,
+                            userEmail: email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                        .then(res => {
+                            if(res.insertedId) {
+                                console.log("User added to the database");
+                            }
+                        })
+                        Swal.fire({ 
+                            title: "Success!!",
+                            text: "User Created Successfully",
+                            icon: "success",
+                            confirmButtonText: "Ok"
+                        })
                         console.log(result.user);
                         navigate(location?.state ? location.state : "/");
                     })

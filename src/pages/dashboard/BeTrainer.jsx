@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const BeTrainer = () => {
@@ -158,7 +158,7 @@ const BeTrainer = () => {
                                             </span>
                                         </label>
                                         <input
-                                            type="time"
+                                            type="number"
                                             name="dayTime"
                                             placeholder="Enter Available time in a day"
                                             className="input input-bordered text-slate-600"
