@@ -5,7 +5,7 @@ const FeaturedCard = ({featuredData}) => {
     return (
         <div>
             <div>
-                <div className="card card-compact w-full bg-slate-300">
+                <div className="card card-compact w-full shadow-md bg-slate-300">
                     <figure>
                         <img className="w-full h-60" src={cover}></img>
                     </figure>
