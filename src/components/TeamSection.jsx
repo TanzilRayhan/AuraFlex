@@ -6,7 +6,7 @@ const TeamSection = () => {
     useEffect(()=>{
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:5001/trainer");
+                const response = await fetch("https://aura-flex-server.vercel.app/trainer");
                 const result = await response.json();
                 setData(result);
             } catch (error) {

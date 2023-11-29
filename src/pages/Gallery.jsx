@@ -16,7 +16,7 @@ const Gallery = () => {
     };
 
     const fetchNextData = async () => {
-        const response = await fetch(`http://localhost:5001/gallery`);
+        const response = await fetch(`https://aura-flex-server.vercel.app/gallery`);
         const data = await response.json();
         return data;
     };

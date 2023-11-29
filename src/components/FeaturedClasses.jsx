@@ -6,7 +6,7 @@ const FeaturedClasses = () => {
     useEffect(()=>{
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:5001/class");
+                const response = await fetch("https://aura-flex-server.vercel.app/class");
                 const result = await response.json();
                 setData(result);
             } catch (error) {

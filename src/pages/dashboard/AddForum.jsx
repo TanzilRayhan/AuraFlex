@@ -21,7 +21,7 @@ const AddForum = () => {
         console.log(trainerInfo);
 
         //send data to the server
-        fetch("http://localhost:5001/trainer", {
+        fetch("https://aura-flex-server.vercel.app/trainer", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

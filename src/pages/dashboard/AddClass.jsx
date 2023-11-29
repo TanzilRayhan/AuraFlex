@@ -21,7 +21,7 @@ const AddClass = () => {
         console.log(classInfo);
 
         //send data to the server
-        fetch("http://localhost:5001/class", {
+        fetch("https://aura-flex-server.vercel.app/class", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
