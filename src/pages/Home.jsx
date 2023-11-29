@@ -5,6 +5,7 @@ import About from '../components/About';
 import Featured from '../components/Featured';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
+import FeaturedClasses from '../components/featuredClasses';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <Featured></Featured>
+            <FeaturedClasses></FeaturedClasses>
             <Testimonials></Testimonials>
             <Newsletter></Newsletter>
             <About></About>

@@ -1,38 +1,29 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link, useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Classes = () => {
-    const loadClass = useLoaderData();
-    console.log(loadClass);
+const FeaturedClasses = () => {
+    const [data, setData] = useState([]);
+    useEffect(()=>{
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:5001/class");
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+               console.log(error);
+            }
+        };
+        fetchData();
+    }, [])
+
+
+
     return (
-        <div>
-            <Helmet>
-                <title>Classes | AuraFlex</title>
-            </Helmet>
-            <div
-                className="hero lg:min-h-fit"
-                style={{
-                    backgroundImage:
-                        "url(https://i.ibb.co/9Nr53PF/Fitness-Classes.jpg)"
-                }}
-            >
-                <div className="hero-overlay p-20 lg:p-32 brightness-50"></div>
-                <div className="hero-content text-neutral-content">
-                    <div className=" ">
-                        <div className="px-5 lg:px-0" >
-                            <img src="https://i.ibb.co/QjMqjPX/Aura-Flex-Logo-white.png" alt="logo" className="lg:w-96 py-5" />
-                            <h1 className=" text-3xl lg:text-7xl font-extrabold py-5 text-white">
-                                | Fitness Classes
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='max-w-7xl mx-auto my-20'>
-                <div className="grid mx-5 lg:mx-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {
-                        loadClass.map((classes) => <div key={classes._id}>
+        <div className='max-w-7xl mx-auto my-24'>
+            <h1 className="text-4xl lg:text-5xl text-center mb-10  font-bold">Featured Classes | AuraFlex</h1>
+            <div className="grid mx-5 lg:mx-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {
+                        data.map((classes) => <div key={classes._id}>
                             <div className="card card-compact w-full shadow-md bg-slate-200">
                                 <figure>
                                     <img className="w-full h-60" src={classes.classCover}></img>
@@ -57,12 +48,9 @@ const Classes = () => {
                             </div>
                         </div>)
                     }
-                </div>
             </div>
-
-
         </div>
     );
 };
 
-export default Classes;
+export default FeaturedClasses;

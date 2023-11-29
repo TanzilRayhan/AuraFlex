@@ -42,7 +42,7 @@ const TrainerDetails = () => {
                             <h2 className="text-center text-xxl  my-3 font-semibold">Skills: patience, communication, flexible </h2>
                   
 
-                            <div className="flex flex-col lg:items-center  py-2 gap-2">
+                            <div className="flex flex-col justify-center items-center  py-2 gap-2">
                                 <div className="badge p-4 badge-lg badge-error text-white">
                                     Experience: {experience} Years
                                 </div>

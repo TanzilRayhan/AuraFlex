@@ -26,7 +26,7 @@ const BeTrainer = () => {
         console.log(trainerInfo);
 
         //send data to the server
-        fetch("https://aura-flex-server.vercel.app/trainer", {
+        fetch("http://localhost:5001/trainer", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

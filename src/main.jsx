@@ -27,6 +27,7 @@ import AllUsers from "./pages/dashboard/AllUsers";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import TrainerBooked from "./pages/trainerBooked";
 import AddClass from "./pages/dashboard/AddClass";
+import AddForum from "./pages/dashboard/AddForum";
 
 
 const router = createBrowserRouter([
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/feature")
+        loader: () => fetch("http://localhost:5001/feature")
       },
       {
         path: "/login",
@@ -51,17 +52,17 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/gallery")
+        loader: () => fetch("http://localhost:5001/gallery")
       },
       {
         path: "/trainer",
         element: <Trainer></Trainer>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/trainer")
+        loader: () => fetch("http://localhost:5001/trainer")
       },
       {
         path: "/trainerDetails/:id",
         element: <TrainerDetails></TrainerDetails>,
-        loader: ({ params }) => fetch(`https://aura-flex-server.vercel.app/trainer/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5001/trainer/${params.id}`)
       },
       {
         path: "/beTrainer",
@@ -74,11 +75,12 @@ const router = createBrowserRouter([
       {
         path: "/classes",
         element: <Classes></Classes>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/class")
+        loader: () => fetch("http://localhost:5001/class")
       },
       {
         path: "/forum",
         element: <Forum></Forum>,
+        loader: () => fetch("http://localhost:5001/forum")
       },
 
     ]
@@ -92,7 +94,7 @@ const router = createBrowserRouter([
       {
         path: 'allTrainers',
         element: <AllTrainers></AllTrainers>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/trainer")
+        loader: () => fetch("http://localhost:5001/trainer")
       },
       {
         path: 'allUsers',
@@ -107,13 +109,13 @@ const router = createBrowserRouter([
       {
         path: 'allSubscribers',
         element: <AllSubscribers></AllSubscribers>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/subscriber")
+        loader: () => fetch("http://localhost:5001/subscriber")
 
       },
       {
         path: 'appliedTrainers',
         element: <AppliedTrainers></AppliedTrainers>,
-        loader: () => fetch("https://aura-flex-server.vercel.app/trainer")
+        loader: () => fetch("http://localhost:5001/trainer")
       },
       {
         path: 'balance',
@@ -122,6 +124,10 @@ const router = createBrowserRouter([
       {
         path: 'addClass',
         element: <AddClass></AddClass>,
+      },
+      {
+        path: 'addForum',
+        element: <AddForum></AddForum>
       },
     ]
 

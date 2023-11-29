@@ -8,7 +8,7 @@ const AppliedTrainers = () => {
     const trainers = useLoaderData();
     console.log(trainers);
 
-    const handleConfirm= id => {
+    const handleConfirm = id => {
         console.log(id);
         Swal.fire({
             title: "Do you want to save the changes?",
@@ -42,7 +42,7 @@ const AppliedTrainers = () => {
                             </th>
                             <th>Trainer Info</th>
                             <th>Available Time slot</th>
-                            <th>Experience:</th>
+                            <th>Experience</th>
                             <th>Confirmation</th>
                         </tr>
                     </thead>
@@ -71,6 +71,7 @@ const AppliedTrainers = () => {
                                     <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours per week</span>
                                 </td>
                                 <td>{trainer.experience} years</td>
+                                
                                 <th>
                                     <button onClick={handleConfirm} className="btn btn-ghost btn-outline btn-sm"><FaEye></FaEye></button>
                                 

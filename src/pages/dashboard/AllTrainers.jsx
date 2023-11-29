@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 
 const AllTrainers = () => {
     const trainers = useLoaderData();
     console.log(trainers);
+
     return (
         <div>
             <h1 className='text-5xl bg-slate-400 text-center py-10 font-semibold'>Total Trainers: {trainers.length}</h1>
@@ -19,7 +21,7 @@ const AllTrainers = () => {
                             </th>
                             <th>Trainer Info</th>
                             <th>Available Time slot</th>
-                            <th>Experience:</th>
+                            <th>Experience</th>
                             <th>Payment</th>
                         </tr>
                     </thead>
@@ -48,6 +50,7 @@ const AllTrainers = () => {
                                     <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours per week</span>
                                 </td>
                                 <td>{trainer.experience} years</td>
+                                
                                 <th>
                                     <button className="btn btn-ghost btn-outline ">Pay</button>
                                     <br />

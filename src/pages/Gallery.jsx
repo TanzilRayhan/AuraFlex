@@ -4,9 +4,8 @@ import FeaturedCard from '../components/FeaturedCard';
 import { Helmet } from 'react-helmet-async';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-
-
 const Gallery = () => {
+   
     const [featuredData, setFeaturedData] = useState(useLoaderData());
     const [page, setPage] = useState(1);
 
@@ -17,7 +16,7 @@ const Gallery = () => {
     };
 
     const fetchNextData = async () => {
-        const response = await fetch(`https://aura-flex-server.vercel.app/gallery`);
+        const response = await fetch(`http://localhost:5001/gallery`);
         const data = await response.json();
         return data;
     };
@@ -46,7 +45,7 @@ const Gallery = () => {
                 </div>
             </div>
             <div className='max-w-7xl mx-auto my-20'>
-                <InfiniteScroll
+                <InfiniteScroll 
                     dataLength={featuredData.length}
                     next={fetchMoreData}
                     hasMore={true}

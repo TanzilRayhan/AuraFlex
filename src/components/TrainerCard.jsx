@@ -17,7 +17,7 @@ const TrainerCard = ({ trainers }) => {
                        
 
                         <div className="flex flex-col items-center justify-center  py-2 gap-2">
-                            <div className="badge p-4 badge-lg badge-accent">
+                            <div className="badge p-4 badge-lg text-white badge-error">
                                 Experience: {experience} Years
                             </div>
                             <div className="badge p-4 badge-lg badge-primary text-sm badge-outline ">

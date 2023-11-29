@@ -21,7 +21,7 @@ const Newsletter = () => {
         console.log(subscriberInfo);
 
            //send data to the server
-           fetch("https://aura-flex-server.vercel.app/subscriber", {
+           fetch("http://localhost:5001/subscriber", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
