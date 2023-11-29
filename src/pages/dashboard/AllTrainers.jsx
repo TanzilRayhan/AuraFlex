@@ -45,9 +45,9 @@ const AllTrainers = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    {trainer.dayTime} hours per day
+                                    {trainer.dayTime} hours / day
                                     <br />
-                                    <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours per week</span>
+                                    <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours / week</span>
                                 </td>
                                 <td>{trainer.experience} years</td>
                                 

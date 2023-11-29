@@ -44,7 +44,6 @@ const Dashboard = () => {
             <div className='flex'>
                 {/*Dashboard Side Bar*/}
                 <aside className='w-1/5 lg:px-5 lg:py-10 min-h-screen shadow-xl bg-slate-300'>
-
                     <div className=" invisible lg:visible">
                         <img src="https://i.ibb.co/tXHGPbH/Aura-Flex-Logo.png" className='lg:w-3/4 px-5' />
                         <div className='divider'></div>
@@ -70,6 +69,24 @@ const Dashboard = () => {
                 </aside>
                 {/*Dashboard Content*/}
                 <div className='flex-1'>
+                <div
+                className="hero"
+                style={{
+                    backgroundImage:
+                        "url(https://images.unsplash.com/photo-1651840403917-50e629a8f3e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+                }}
+            >
+                <div className="hero-overlay p-20 brightness-50"></div>
+                <div className="hero-content text-neutral-content">
+                    <div className=" ">
+                        <div className="px-5 lg:px-0" >
+                            <h1 className=" text-3xl lg:text-7xl font-extrabold py-5 text-white">
+                                <img src="https://i.ibb.co/QjMqjPX/Aura-Flex-Logo-white.png" alt="logo" className="lg:w-96 py-5" />Dashboard
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     <Outlet></Outlet>
                 </div>
             </div>

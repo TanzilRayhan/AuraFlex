@@ -36,7 +36,11 @@ const Forum = () => {
                         forums.map((forum)=> <div key={forum._id} className="card w-full shadow-lg bg-slate-300 ">
                         <div className="card-body">
                           <h2 className="text-2xl font-bold">{forum.postTitle}</h2>
+                          <div className='flex  gap-2'>
                           <h2 className="badge badge-outline p-3 ">Admin</h2>
+                          <h2 className="badge badge-outline badge-error p-3 ">Trainer</h2>
+                          </div>
+                         
                           <h2 className="lg:card-title badge themeColor text-white p-4 ">Category: {forum.category}</h2>
 
                           <p>{forum.description}</p>

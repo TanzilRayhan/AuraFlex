@@ -30,8 +30,8 @@ const AppliedTrainers = () => {
     return (
         <div>
             <h1 className='text-5xl bg-slate-400 text-center py-10 font-semibold'>Applied Trainers: {trainers.length}</h1>
-            <div className="overflow-x-auto p-10">
-                <table className="table w-full">
+            <div className="overflow-x-auto lg:p-10">
+                <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
@@ -48,7 +48,7 @@ const AppliedTrainers = () => {
                     </thead>
                     <tbody>
                         {
-                            trainers.map((trainer, index) =>  <tr key={trainer._id}>
+                            trainers.map((trainer, index) =>  <tr   key={trainer._id}>
                                 <th>
                                     {index + 1}
                                 </th>
@@ -66,9 +66,9 @@ const AppliedTrainers = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    {trainer.dayTime} hours per day
+                                    {trainer.dayTime} hours / day
                                     <br />
-                                    <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours per week</span>
+                                    <span className="badge badge-ghost badge-sm">{trainer.weekTime} hours / week</span>
                                 </td>
                                 <td>{trainer.experience} years</td>
                                 
