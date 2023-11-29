@@ -16,7 +16,7 @@ const TrainerCard = ({ trainers }) => {
                         <h2 className="text-center text-2xl lg:text-4xl font-bold">{trainerName}</h2>
                        
 
-                        <div className="flex flex-col lg:items-center  py-2 gap-2">
+                        <div className="flex flex-col items-center justify-center  py-2 gap-2">
                             <div className="badge p-4 badge-lg badge-accent">
                                 Experience: {experience} Years
                             </div>

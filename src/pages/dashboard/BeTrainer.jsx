@@ -196,12 +196,6 @@ const BeTrainer = () => {
                                     </div>
 
                                 </div>
-                                <label className="label">
-                                    <a href="" className="label-text-alt link link-hover font-bold text-white pt-2">
-                                        Forgot password?
-                                    </a>
-                                </label>
-
                                 <div className="form-control  items-center mt-3">
                                     <button className="btn w-2/3 btn-primary bg-[#0a183b]">
                                         Apply

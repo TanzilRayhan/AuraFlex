@@ -26,6 +26,7 @@ import AppliedTrainers from "./pages/dashboard/AppliedTrainers";
 import AllUsers from "./pages/dashboard/AllUsers";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import TrainerBooked from "./pages/trainerBooked";
+import AddClass from "./pages/dashboard/AddClass";
 
 
 const router = createBrowserRouter([
@@ -73,6 +74,7 @@ const router = createBrowserRouter([
       {
         path: "/classes",
         element: <Classes></Classes>,
+        loader: () => fetch("https://aura-flex-server.vercel.app/class")
       },
       {
         path: "/forum",
@@ -105,6 +107,7 @@ const router = createBrowserRouter([
       {
         path: 'allSubscribers',
         element: <AllSubscribers></AllSubscribers>,
+        loader: () => fetch("https://aura-flex-server.vercel.app/subscriber")
 
       },
       {
@@ -115,6 +118,10 @@ const router = createBrowserRouter([
       {
         path: 'balance',
         element: <Balance></Balance>,
+      },
+      {
+        path: 'addClass',
+        element: <AddClass></AddClass>,
       },
     ]
 
