@@ -48,7 +48,7 @@ const Newsletter = () => {
         <div data-aos="zoom-in"
             data-aos-easing="linear"
             data-aos-duration="1000" className='max-w-7xl mx-5 lg:mx-auto my-20'>
-            <div className="card lg:card-side lg:gap-20 bg-slate-300">
+            <div className="card lg:card-side shadow-md lg:gap-20 bg-slate-300">
                 <figure className='lg:w-4/5'><img src="https://i.ibb.co/8Myv06M/newsletter.jpg" alt="Album" /></figure>
                 <div className="lg:w-4/5 card-body items-center justify-center">
                     <form onSubmit={subscriber}>

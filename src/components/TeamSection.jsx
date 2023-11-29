@@ -1,34 +1,46 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const TrainerCard = ({ trainers }) => {
-    const { _id, trainerName, trainerImage, weekTime, dayTime, experience } = trainers || {}
+const TeamSection = () => {
+    const [data, setData] = useState([]);
+    useEffect(()=>{
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:5001/trainer");
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+               console.log(error);
+            }
+        };
+        fetchData();
+    }, [])
+
+    const specificIds = ['65667402b84036261fbe4d97', '65667553b84036261fbe4d99', '656674f5b84036261fbe4d98'];
+    const filteredData = data.filter(item => specificIds.includes(item._id));
+
     return (
-        <div>
-            <div className="card w-full my-5 bg-slate-200 shadow-md">
+        <div className='max-w-7xl mx-auto my-24'>
+        <h1 className="text-4xl lg:text-5xl text-center mb-10 font-bold">Trainers Team | AuraFlex</h1>
+        <div className="grid mx-5 lg:mx-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+                    filteredData.map((trainer) => <div key={trainer._id}>
+                        <div className="card w-full my-5 bg-slate-200 shadow-md">
                 <div className="avatar mt-5 justify-center items-center">
                     <div className="w-40 rounded-full ring ring-info ring-offset-base-100 ring-offset-2">
-                        <img src={trainerImage} />
+                        <img src={trainer.trainerImage} />
                     </div>
                 </div>
                 <div className="card-body">
                     <div>
-                        <h2 className="text-center text-2xl lg:text-4xl font-bold">{trainerName}</h2>
+                        <h2 className="text-center text-2xl lg:text-4xl font-bold">{trainer.trainerName}</h2>
                        
 
                         <div className="flex flex-col items-center justify-center  py-2 gap-2">
                             <div className="badge p-4 badge-lg text-white badge-error">
-                                Experience: {experience} Years
-                            </div>
-                            <div className="badge p-4 badge-lg badge-primary text-sm badge-outline ">
-                                Available Day Hour: {dayTime} hours
-                            </div>
-                            <div className="badge p-4 badge-lg badge-error text-sm badge-outline ">
-                                Available Week Hour: {weekTime} hours
+                                Experience: {trainer.experience} Years
                             </div>
                         </div>
-
-                        <p className="mr-20 font-semibold text-lg">{ }</p>
                     </div>
                     <div className=" flex my-4 items-center justify-center gap-3">
                             <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
@@ -37,15 +49,18 @@ const TrainerCard = ({ trainers }) => {
                         </div>
 
                     <div className="card-actions justify-center">
-                        <Link to={`/trainerDetails/${_id}`}>
-                            <button className="btn w-40 btn-outline btn-ghost">Hire Now</button>
+                        <Link to='/trainer'>
+                            <button className="btn w-40 btn-outline btn-ghost">Know More</button>
                         </Link>
 
                     </div>
                 </div>
             </div>
+                    </div>)
+                }
         </div>
+    </div>
     );
 };
 
-export default TrainerCard;
+export default TeamSection;

@@ -6,6 +6,8 @@ import Featured from '../components/Featured';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 import FeaturedClasses from '../components/featuredClasses';
+import LatestArticles from '../components/LatestArticles';
+import TeamSection from '../components/TeamSection';
 
 const Home = () => {
     return (
@@ -16,8 +18,10 @@ const Home = () => {
             <Banner></Banner>
             <Featured></Featured>
             <FeaturedClasses></FeaturedClasses>
+            <TeamSection></TeamSection>
             <Testimonials></Testimonials>
             <Newsletter></Newsletter>
+            <LatestArticles></LatestArticles>
             <About></About>
             
         </div>
